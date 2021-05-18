@@ -1,3 +1,17 @@
+--  __ ___      _____  ___  ___  _ __ ___   _____      ___ __ ___  
+-- / _` \ \ /\ / / _ \/ __|/ _ \| '_ ` _ \ / _ \ \ /\ / / '_ ` _ \ 
+--| (_| |\ V  V /  __/\__ \ (_) | | | | | |  __/\ V  V /| | | | | |
+-- \__,_| \_/\_/ \___||___/\___/|_| |_| |_|\___| \_/\_/ |_| |_| |_|
+--                                                                 
+--                  __ _       
+--  ___ ___  _ __  / _(_) __ _ 
+-- / __/ _ \| '_ \| |_| |/ _` |
+--| (_| (_) | | | |  _| | (_| |
+-- \___\___/|_| |_|_| |_|\__, |
+--                       |___/ 
+--
+-- Theory's AwesomeWM Configs
+--
 -- If LuaRocks is installed, make sure that packages installed through it are
 -- found (e.g. lgi). If LuaRocks is not installed, do nothing.
 pcall(require, "luarocks.loader")
