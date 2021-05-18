@@ -335,7 +335,15 @@ globalkeys = gears.table.join(
               {description = "lua execute prompt", group = "awesome"}),
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,
-              {description = "show the menubar", group = "launcher"})
+              {description = "show the menubar", group = "launcher"}),
+
+    -- Scrots
+    -- Full Scrot
+    awful.key( {} , "Print", function() awful.spawn.with_shell("$HOME/.config/scripts/scrnshot.sh") end,
+              {description = "take a screenshot", group = "utils"}),
+    -- Selection Scrot
+    awful.key( { modkey, "Shift" }, "s", function() awful.spawn.with_shell("$HOME/.config/scripts/scrnclip.sh") end,
+    	      {description = "take a screen clip", group = "utils"})
 )
 
 clientkeys = gears.table.join(
@@ -568,12 +576,17 @@ client.connect_signal("mouse::enter", function(c)
     c:emit_signal("request::activate", "mouse_enter", {raise = false})
 end)
 
-client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
-client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+client.connect_signal("focus", function(c) 
+	c.border_color = beautiful.border_focus 
+	c.opacity = 1
+end)
+client.connect_signal("unfocus", function(c) 
+	c.border_color = beautiful.border_normal 
+	c.opacity = 0.8
+end)
 -- }}}
 
 
 -- Application Autostart
 awful.spawn.with_shell("picom")
 awful.spawn.with_shell("nitrogen --restore")
-awful.spawn.with_shell("./$HOME/.config/dunst/lanuch.sh")
