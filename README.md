@@ -21,7 +21,7 @@ $ git submodule update --recursive
 ```
 Install the dots (NOTE: This will overwite exsisting dotfiles)
 ```
-$ ./dotdrop.sh install artix\
+$ ./dotdrop.sh install artix
 ```
 
 ### Images:
