@@ -4,7 +4,7 @@
 
 These are the dotfiles for my artix laptop.
 
-This is a work inprogress as I am new to lua (at least in this scope)
+This is a work in progress,as I am still learning lua (at least in this scope).
 Feel free to open any issues if you see something off or incorrect.
 
 ## Bootstrapping/Installation
