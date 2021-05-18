@@ -23,7 +23,7 @@ Install the dots (NOTE: This will overwite exsisting dotfiles)
 ### Images:
 ![Blank Destop](/images/rev1/desktop.png)
 
-![Terminal Apps](/images/rev1/_termapps.png)
+![Terminal Apps](/images/rev1/termapps.png)
 
 ### Rice Specs:
 #### Interface:
