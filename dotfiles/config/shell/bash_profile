@@ -2,6 +2,6 @@
 # ~/.bash_profile
 #
 
-[[ -f ~/.bashrc ]] && . ~/.bashrc
+export DOTS=$HOME/artix-dotfiles
 
-export DOTS="$HOME/artix-dotfiles"
+[[ -f ~/.bashrc ]] && . ~/.bashrc
