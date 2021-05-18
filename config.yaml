@@ -1,0 +1,66 @@
+config:
+  backup: true
+  create: true
+  dotpath: dotfiles
+dotfiles:
+  d_awesome:
+    src: config/awesome
+    dst: ~/.config/awesome
+  d_dunst:
+    src: config/dunst
+    dst: ~/.config/dunst
+  d_neofetch:
+    src: config/neofetch
+    dst: ~/.config/neofetch
+  d_shell:
+    src: config/shell
+    dst: ~/.config/shell
+  d_nvim:
+    src: config/nvim
+    dst: ~/.config/nvim
+  d_newsboat:
+    src: config/newsboat
+    dst: ~/.config/newsboat
+  d_rofi:
+    src: config/rofi
+    dst: ~/.config/rofi
+  d_x11:
+    src: config/x11
+    dst: ~/.config/x11
+  d_picom:
+    src: config/picom
+    dst: ~/.config/picom
+  d_bspwm:
+    src: config/bspwm
+    dst: ~/.config/bspwm
+  d_thunar:
+    src: config/Thunar
+    dst: ~/.config/Thunar
+    chmod: '700'
+  d_polybar:
+    src: config/polybar
+    dst: ~/.config/polybar
+  d_htop:
+    src: config/htop
+    dst: ~/.config/htop
+    chmod: '700'
+  d_scripts:
+    src: config/scripts
+    dst: ~/.config/scripts
+profiles:
+  artix:
+    dotfiles:
+    - d_awesome
+    - d_dunst
+    - d_neofetch
+    - d_shell
+    - d_nvim
+    - d_newsboat
+    - d_rofi
+    - d_x11
+    - d_picom
+    - d_bspwm
+    - d_thunar
+    - d_polybar
+    - d_htop
+    - d_scripts

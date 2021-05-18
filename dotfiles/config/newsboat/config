@@ -1,0 +1,15 @@
+# Newsboat Config
+max-items 		100
+browser firefox		"firefox --new-tab %u"
+
+unbind-key		R
+bind-key		^R   reload-all
+
+# Color config
+color background	white	black
+color listnormal	white	black
+color listfocus		green	black
+color listnormal_unread	white	black
+color listfocus_unread	green	black
+color info		red	black
+color article		blue	black
