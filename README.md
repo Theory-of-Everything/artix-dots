@@ -16,9 +16,13 @@ $ git clone https://github.com/Theory-of-Everything/artix-dots
 $ cd artix-dots
 ```
 Update the submodules:
-`$ git submodule update --recursive`
+```
+$ git submodule update --recursive
+```
 Install the dots (NOTE: This will overwite exsisting dotfiles)
-`$ ./dotdrop.sh install artix`
+```
+$ ./dotdrop.sh install artix\
+```
 
 ### Images:
 ![Blank Destop](/images/rev1/desktop.png)
