@@ -54,7 +54,7 @@ function git_branch() {   # Display current git branch as "<{branch}>"
 
 # Shortcuts
 alias vim="nvim"
-alias dotdrop="$HOME/dotfiles/dotdrop.sh"
+alias dotdrop="$HOME/artix-dotfiles/dotdrop.sh --cfg=~/artix-dotfiles/config.yaml"
 
 # Term-Specific Config
 alias ref="source ~/.bashrc"
