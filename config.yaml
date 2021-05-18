@@ -33,10 +33,6 @@ dotfiles:
   d_bspwm:
     src: config/bspwm
     dst: ~/.config/bspwm
-  d_thunar:
-    src: config/Thunar
-    dst: ~/.config/Thunar
-    chmod: '700'
   d_polybar:
     src: config/polybar
     dst: ~/.config/polybar
@@ -60,7 +56,6 @@ profiles:
     - d_x11
     - d_picom
     - d_bspwm
-    - d_thunar
     - d_polybar
     - d_htop
     - d_scripts
