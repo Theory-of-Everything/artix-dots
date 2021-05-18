@@ -1,6 +1,7 @@
 !-------------------------URxvt Config
 urxvt.scrollBar: false
 urxvt.font: xft:agave Nerd Font Mono:style=r:pixelsize=15
+!urxvt.font: xft:Cozette:style=Medium:pixelsize=12
 !urxvt.font: xft:awesome:pixelsize=16
 
 Xft*dpi: 109
