@@ -29,7 +29,17 @@ $ ./dotdrop.sh install artix
 
 ![Terminal Apps](/images/rev1/termapps.png)
 
-### Rice Specs:
+### Keybinds:
+#### Window/Workspace Manipultion:
+- <kbd> Mod </kbd> <kbd> Enter </kbd>: Opens Terminal
+- <kbd> Mod </kbd> <kbd> Q </kbd>: Open App Launcher 
+- <kbd> Mod </kbd> <kbd> W </kbd>: Close/Kill Window 
+- <kbd> Mod </kbd> <kbd> H </kbd> / <kbd> J </kbd>: Focus Up/Down Stack
+- <kbd> Mod </kbd> <kbd> E </kbd>: Pull Window to Master Node 
+- <kbd> Mod </kbd> <kbd> [ </kbd> / <kbd> ] </kbd>: Previous/Next Tag/Workspace
+
+
+### Packages:
 #### Interface:
 - Distro: `Artix Linux`
 - WM: `AwesomeWM`
