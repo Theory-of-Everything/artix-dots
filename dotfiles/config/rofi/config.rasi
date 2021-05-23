@@ -1,3 +1,4 @@
 configuration {
-	theme: "/usr/share/rofi/themes/dmenu.rasi";
+	modi: "window,run,ssh,combi";
+	theme: "dmenu.rasi";
 }

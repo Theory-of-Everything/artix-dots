@@ -1,8 +1,17 @@
 !-------------------------URxvt Config
+urxvt.perl-ext-common: clipboard
+
 urxvt.scrollBar: false
+urxvt.internalBorder: 10
+urxvt.cursorBlink: true
+
+urxvt.depth: 32
+urxvt*background: rgba:0000/0000/0200/c800
+
 urxvt.font: xft:agave Nerd Font Mono:style=r:pixelsize=15
-!urxvt.font: xft:Cozette:style=Medium:pixelsize=12
-!urxvt.font: xft:awesome:pixelsize=16
+
+urxvt.keysym.M-c: perl:clipboard:copy
+urxvt.keysym.M-v: perl:clipboard:paste
 
 Xft*dpi: 109
 

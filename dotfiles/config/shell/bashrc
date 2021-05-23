@@ -1,4 +1,9 @@
-# .bashrc
+#  _               _              
+# | |__   __ _ ___| |__  _ __ ___ 
+# | '_ \ / _` / __| '_ \| '__/ __|
+# | |_) | (_| \__ \ | | | | | (__ 
+# |_.__/ \__,_|___/_| |_|_|  \___|
+#
 
 # If not running interactively, don't do anything
 
@@ -37,8 +42,6 @@ clr='\033[00m'      # Reset
 alias ls='ls --color=auto'
 
 PS1=''$tgrn'[\u@\h\ '$tclr''$tred'\W'$tgrn'] '$tblu'$(git_branch)'$tgrn' => '$tclr''
-#  ┌└─ ┏┗━ ┍┕ ╾ ╒╘═
-#PS1='\[\033[01;32m\]┏[\u@\h\ \[\033[00m\]\[\033[01;31m\]\W\[\033[01;32m\]]\n┗━━━━━»  \[\033[00m\]'
 
 # Functions
 # ===============================================================================================
@@ -49,12 +52,22 @@ function git_branch() {   # Display current git branch as "<{branch}>"
 	fi
 }
 
+function mkscr() {
+	touch "$1".sh
+	chmod +x "$1".sh
+	echo "#!/bin/sh" > "$1".sh
+}
+
 # Aliases
 # ===============================================================================================
 
 # Shortcuts
 alias vim="nvim"
 alias dotdrop="$HOME/artix-dotfiles/dotdrop.sh --cfg=~/artix-dotfiles/config.yaml"
+alias ytdl="youtube-dl"
+alias yt-dl="youtube-dl"
+alias rss="newsboat"
+alias scim="sc-im"
 
 # Term-Specific Config
 alias ref="source ~/.bashrc"
@@ -63,6 +76,7 @@ alias refterm="source ~/.bashrc"
 # Browsing Aliases
 alias cls="clear"
 alias lsd="ls -a"
+alias lsl="ls -al"
 alias browse="lf"
 alias navhome="cd ~/"
 alias navconf="cd ~/.config"
@@ -98,9 +112,10 @@ alias nettest="ping theoryware.net"
 # startup
 # ===============================================================================================
 
+clear
+
 if [ -n "$visual_studio" ] ; then
 	:
 else
 	neofetch	
 fi
-

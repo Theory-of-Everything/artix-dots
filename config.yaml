@@ -43,6 +43,10 @@ dotfiles:
   d_scripts:
     src: config/scripts
     dst: ~/.config/scripts
+  d_mpv:
+    src: config/mpv
+    dst: ~/.config/mpv
+    chmod: '700'
 profiles:
   artix:
     dotfiles:
@@ -59,3 +63,4 @@ profiles:
     - d_polybar
     - d_htop
     - d_scripts
+    - d_mpv

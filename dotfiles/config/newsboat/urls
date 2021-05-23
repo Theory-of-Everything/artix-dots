@@ -1,13 +1,27 @@
--------------------------------------- 
-Artix_Updates
-https://archlinux.org/feeds/news
-https://artixlinux.org/feed.php
--------------------------------------- 
-Github_Updates
-https://github.com/Theory-of-Everything.private.atom?token=AIMRE43BI4UWH5T6AJUVIPF6QHTDQ
--------------------------------------- 
-Other_Updates
-https://lukesmith.xyz/rss.xml
-https://lukesmith.xyz/videos
-https://notrelated.xyz/rss
+" ~/distro update feeds/ "
+https://archlinux.org/feeds/news "system"
+https://artixlinux.org/feed.php "system"
+https://distrowatch.com/news/distro/artix.xml "system" "distro"
+https://distrowatch.com/news/distro/arch.xml "system" "distro"
+https://distrowatch.com/news/dw.xml "system" "distro"
+" "
+" ~/dev feeds/ "
+https://github.com/Theory-of-Everything.private.atom?token=AIMRE43BI4UWH5T6AJUVIPF6QHTDQ "git" "~Priavte GitHub Feed"
+https://github.com/awesomeWM/awesome/commits/master.atom "git"
+https://github.com/p-gen/smenu/commits/master.atom "git"
+https://github.com/cheat/cheat/commits/master.atom "git"
+https://github.com/blobject/agave/commits/master.atom "git"
+https://github.com/noctuid/tdrop/commits/master.atom "git"
+https://github.com/schollz/croc/commits/master.atom "git"
+https://github.com/anime-dl/anime-downloader/commits/master.atom "git"
+" "
+" ~/personal projects/ "
+https://github.com/Theory-of-Everything/artix-dots/commits/master.atom "project"
+https://github.com/Theory-of-Everything/artix-dots/issues/master.atom "project"
 
+" "
+" ~/people/ "
+https://lukesmith.xyz/rss.xml "news" "~Luke Smith's News Feed"
+https://lukesmith.xyz/videos "yt" "~Luke Smith's Video Feed"
+https://notrelated.xyz/rss "podcast"
+https://www.lexaloffle.com/bbs/feed.php

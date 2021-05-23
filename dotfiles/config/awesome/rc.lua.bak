@@ -3,6 +3,12 @@
 --| (_| |\ V  V /  __/\__ \ (_) | | | | | |  __/\ V  V /| | | | | |
 -- \__,_| \_/\_/ \___||___/\___/|_| |_| |_|\___| \_/\_/ |_| |_| |_|
 --                                                                 
+--                  __ _       
+--  ___ ___  _ __  / _(_) __ _ 
+-- / __/ _ \| '_ \| |_| |/ _` |
+--| (_| (_) | | | |  _| | (_| |
+-- \___\___/|_| |_|_| |_|\__, |
+--                       |___/ 
 --
 -- Theory's AwesomeWM Configs
 --
@@ -60,12 +66,9 @@ end
 
 -- This is used later as the default terminal and editor to run.
 terminal = "urxvt"
-editor = os.getenv("nvim") or "nano"
+editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 browser = "waterfox"
-flieman = "Thunar"
-imageman = "feh"
-videoman = "mpv"
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
@@ -107,30 +110,9 @@ myawesomemenu = {
    { "Quit", function() awesome.quit() end },
 }
 
-webmenu = {
-   { "TheoryWare", browser .. " --new-tab https://theoryware.net" },
-   { "GitHub", browser .. " --new-tab https://github.com/Theory-of-Everything" },
-   { "GitLab", browser .. " --new-tab https://gitlab.com/Theory_of_Everything" },
-   { "ProtonMail", browser .. " --new-tab https://mail.protonmail.com/login" },
-   { "Discord", browser .. " --new-tab https://discord.com" },
-   { "Reddit", browser .. " --new-tab https://reddit.com" },
-}
-
-linuxwebmenu = {
-   { "ArchWiki", browser .. " --new-tab https://wiki.archlinux.org/" },
-   { "ArtixWiki", browser .. " --newt-tab https://wiki.artixlinux.org/" },
-   { "Distrowatch", browser .. " --new-tab https://distrowatch.com/" },
-   { "AUR", browser .. " --new-tab https://aur.archlinux.org/" },
-}
-
 mymainmenu = awful.menu({ items = { { "Awesome", myawesomemenu, beautiful.awesome_icon },
-				    { "Web Stuff", webmenu },
-				    { "Linux Web", linuxwebmenu },
                                     { "Urxvt", terminal },
 				    { "Waterfox", browser },
-				    { "Thunar", fileman },
-				    { "feh", imageman },
-				    { "mpv", videoman },
 				    { "Neovim", terminal .. " -e nvim"},
 				    { "News", terminal .. " -e newsboat"},
                                   }
@@ -524,7 +506,6 @@ awful.rules.rules = {
           "Wpa_gui",
           "veromix",
           "xtightvncviewer"},
-  	  
 
         -- Note that the name property shown in xprop might be set slightly after creation of the client
         -- and the name shown there might not match defined rules here.
@@ -540,7 +521,7 @@ awful.rules.rules = {
 
     -- Add titlebars to normal clients and dialogs
     { rule_any = {type = { "normal", "dialog" }
-      }, properties = { titlebars_enabled = false }
+      }, properties = { titlebars_enabled = true }
     },
 
     -- Set Firefox to always map on the tag named "2" on screen 1.
@@ -605,17 +586,17 @@ client.connect_signal("request::titlebars", function(c)
 end)
 
 -- Enable sloppy focus, so that focus follows mouse.
---client.connect_signal("mouse::enter", function(c)
---    c:emit_signal("request::activate", "mouse_enter", {raise = false})
---end)
+client.connect_signal("mouse::enter", function(c)
+    c:emit_signal("request::activate", "mouse_enter", {raise = false})
+end)
 
 client.connect_signal("focus", function(c) 
 	c.border_color = beautiful.border_focus 
-	c.opacity = 1 
+	c.opacity = 1
 end)
 client.connect_signal("unfocus", function(c) 
 	c.border_color = beautiful.border_normal 
-	c.opacity = 1
+	c.opacity = 0.8
 end)
 -- }}}
 
@@ -623,4 +604,3 @@ end)
 -- Application Autostart
 awful.spawn.with_shell("picom")
 awful.spawn.with_shell("nitrogen --restore")
-awful.spawn.with_shell("pgrep -x udiskie > /dev/null || udiskie -t")
