@@ -24,7 +24,10 @@ Install the dots (NOTE: This will overwite exsisting dotfiles)
 ```
 $ ./dotdrop.sh install artix
 ```
-
+### TO-DO:
+1. Add wiki docs
+2. actually improve the awesome config
+3. make a better "installer"
 ## Images:
 ![Blank Destop](/images/rev1/desktop.png)
 
