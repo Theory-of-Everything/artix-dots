@@ -1,17 +1,28 @@
 !-------------------------URxvt Config
-urxvt.perl-ext-common: clipboard
+urxvt.perl-ext-common: clipboard,url-select,keyboard-select,resize-font
 
 urxvt.scrollBar: false
 urxvt.internalBorder: 10
 urxvt.cursorBlink: true
 
 urxvt.depth: 32
-urxvt*background: rgba:0000/0000/0200/c800
+urxvt.background: rgba:0000/0000/0200/c800
 
-urxvt.font: xft:agave Nerd Font Mono:style=r:pixelsize=15
+!urxvt Font Config
+urxvt.font: xft:agave Nerd Font Mono:style=r:pixelsize=16
+urxvt.resize-font.smaller: C-j
+urxvt.resize-font.bigger: C-k
 
+
+!urxvt Copy/Paste keys
 urxvt.keysym.M-c: perl:clipboard:copy
 urxvt.keysym.M-v: perl:clipboard:paste
+
+
+!urxvt url-sel/keeb-sel keys
+urxvt.keysym.M-u: prel:url-select:select_next
+urxvt.keysym.M-Escape: perl:keyboard-select:search
+urxvt.keysym.M-s: perl:keyboard-select:search
 
 Xft*dpi: 109
 

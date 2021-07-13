@@ -14,10 +14,14 @@ Plug 'sbdchd/neoformat'
 Plug 'glepnir/dashboard-nvim'
 Plug 'mattn/emmet-vim'
 Plug 'junegunn/goyo.vim'
+"Plug 'vimsence/vimsence'
 
 call plug#end()
 
+" Plug-opts
 "====================
+
+"
 "CMNDS
 "====================
 "
@@ -39,7 +43,7 @@ let g:dashboard_custom_header = [
 \ "              neovim               ",	
 \]
 
-"====================
+"
 "KEYBINDS
 "====================
 "
@@ -47,5 +51,8 @@ noremap <SPACE> <Nop>
 let mapleader="Space"				" Map Leader to Space
 
 map <C-n> :set rnu!<Cr>				" Set Realative Line Numbers
+
+map <C-u> "+p					" Paste from system clip
+map <C-y> "+y					" Copy to system clip
 
 let g:user_emmet_leader_key='<C-z>'		" Emmet Leader Key rebind

@@ -1,0 +1,18 @@
+#!/usr/bin/env sh
+height=$2
+width=$1
+size=$3
+output=$6
+c1=$4
+c2=$5
+x="0"
+tmp_file="/tmp/StripeFactory_tmp.txt"
+> $tmp_file
+while [ $x -lt $width ]; do
+    printf "%s\n"  "rectangle $x,0 $((x+size)),$height" >> $tmp_file
+      x=$((x+size))
+      x=$((x+size))
+done
+
+command="convert -size "$width"x"$height" xc:$c1 -fill $c2 -draw @$tmp_file $output"
+$command

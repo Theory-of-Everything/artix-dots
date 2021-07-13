@@ -3,30 +3,29 @@
 --    By Adrian C. (anrxc)   --
 -------------------------------
 
-local themes_path = "/home/theorytoe/.config/awesome/themes/"
+local themes_path = require("gears.filesystem").get_themes_dir()
 local dpi = require("beautiful.xresources").apply_dpi
-local bling = require("bling")
 
 -- {{{ Main
 local theme = {}
---theme.wallpaper = themes_path .. "zenburn/zenburn-background.png"
+theme.wallpaper = themes_path .. "zenburn/zenburn-background.png"
 -- }}}
 
 -- {{{ Styles
-theme.font      = "cozette 10"
+theme.font      = "sans 8"
 
 -- {{{ Colors
 theme.fg_normal  = "#DCDCCC"
-theme.fg_focus   = "#DCDCCC"
-theme.fg_urgent  = "#DCDCCC"
-theme.bg_normal  = "#151515"
-theme.bg_focus   = "#363636"
-theme.bg_urgent  = "#CE3C65"
+theme.fg_focus   = "#F0DFAF"
+theme.fg_urgent  = "#CC9393"
+theme.bg_normal  = "#3F3F3F"
+theme.bg_focus   = "#1E2320"
+theme.bg_urgent  = "#3F3F3F"
 theme.bg_systray = theme.bg_normal
 -- }}}
 
 -- {{{ Borders
-theme.useless_gap   = dpi(3)
+theme.useless_gap   = dpi(0)
 theme.border_width  = dpi(2)
 theme.border_normal = "#3F3F3F"
 theme.border_focus  = "#6F6F6F"
@@ -34,7 +33,7 @@ theme.border_marked = "#CC9393"
 -- }}}
 
 -- {{{ Titlebars
-theme.titlebar_bg_focus  = "#5F5F5F"
+theme.titlebar_bg_focus  = "#3F3F3F"
 theme.titlebar_bg_normal = "#3F3F3F"
 -- }}}
 
@@ -80,7 +79,6 @@ theme.taglist_squares_unsel = themes_path .. "zenburn/taglist/squarez.png"
 -- }}}
 
 -- {{{ Misc
-theme.pfp_icon           = themes_path .. "zenburn/pfp.png"
 theme.awesome_icon           = themes_path .. "zenburn/awesome-icon.png"
 theme.menu_submenu_icon      = themes_path .. "default/submenu.png"
 -- }}}
@@ -131,9 +129,6 @@ theme.titlebar_maximized_button_normal_active = themes_path .. "zenburn/titlebar
 theme.titlebar_maximized_button_focus_inactive  = themes_path .. "zenburn/titlebar/maximized_focus_inactive.png"
 theme.titlebar_maximized_button_normal_inactive = themes_path .. "zenburn/titlebar/maximized_normal_inactive.png"
 -- }}}
-
--- {{{ Notifications
-theme.notification_icon_size = 100
 -- }}}
 
 return theme

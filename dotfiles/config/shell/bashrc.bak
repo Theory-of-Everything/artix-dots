@@ -34,11 +34,17 @@ cyn='\033[01;36m'   # Cyan
 wht='\033[01;37m'   # White
 clr='\033[00m'      # Reset
 
+
+
 # Prompt
+# ===============================================================================================
+
+alias ls='ls --color=auto'
 
 PS1=''$tgrn'[\u@\h\ '$tclr''$tred'\W'$tgrn'] '$tblu'$(git_branch)'$tgrn' => '$tclr''
 
 # Functions
+# ===============================================================================================
 
 function git_branch() {   # Display current git branch as "<{branch}>"
 	if [ -d .git ] ; then
@@ -53,35 +59,12 @@ function mkscr() {
 }
 
 # Enviroment Vars
-append_path () {
-	case ":$PATH:" in
-	    *:"$1":*)
-		;;
-	    *)
-		PATH="${PATH:+$PATH:}$1"
-	esac
-}
-
-append_path "$HOME/.local/bin"
-append_path "$HOME/.config/scripts"
-
-export QT_QPA_PLATFORMTHEME=qt5ct
-
-# app enviros
-export EDITOR=nvim
-export FILEMAN=thunar
-export VIDPLAYER=mpv
-export IMGVIEWER=feh
-export AUDPLAYER=cmus
-export WEBBROWSER=brave
-
-# other enviros
-export MPD_OPTS="$HOME/.conf/mpd/mpd.conf"
+export GOPATH=/home/theorytoe/golib
+export GOPATH=$GOPATH/home/theorytoe/repos/golang
+export PATH=$PATH:$GOPATH/bin
 
 # Aliases
-alias ls='ls --color=auto'
-# vim-like shorcuts
-alias ':q'="exit"
+# ===============================================================================================
 
 # Shortcuts
 alias vim="nvim"
@@ -90,12 +73,6 @@ alias ytdl="youtube-dl"
 alias yt-dl="youtube-dl"
 alias rss="newsboat"
 alias scim="sc-im"
-alias kpass="keepassxc-cli open ~/.keepassxc/Passwords.kdbx"
-alias ftmime="xdg-mime query filetype"
-alias top="htop"
-alias gembrowse="amfora"
-alias ping="prettyping"
-alias ncmp="ncmpcpp"
 
 # Term-Specific Config
 alias ref="source ~/.bashrc"
@@ -116,28 +93,29 @@ alias mkf="touch"
 alias cp="cp -v"
 alias mv="mv -v"
 alias rm="rm -v"
-alias mkdir="mkdir -p"
 
 
 # Quick Config Aliases
-alias bashrc="$EDITOR ~/.bashrc"
-alias xres="$EDITOR ~/.Xresources"
-alias bspconf="$EDITOR ~/.config/bspwm/bspwmrc"
-alias aweconf="$EDITOR ~/.config/awesome/"
-alias sxhkdconf="$EDITOR ~/.config/sxhkd/sxhkdrc"
-alias polyconf="$EDITOR ~/.config/polybar"
-alias nvimconf="$EDITOR ~/.config/nvim/init.vim"
-alias roficonf="$EDITOR ~/.config/rofi/config.rasi"
-alias neoconf="$EDITOR ~/.config/neofetch/config.conf"
+alias bashrc="nvim ~/.bashrc"
+alias xres="nvim ~/.Xresources"
+alias nbashrc="nano ~/.bashrc"
+alias bspconf="nvim ~/.config/bspwm/bspwmrc"
+alias aweconf="nvim ~/.config/awesome/"
+alias sxhkdconf="nvim ~/.config/sxhkd/sxhkdrc"
+alias polyconf="nvim ~/.config/polybar"
+alias nvimconf="nvim ~/.config/nvim/init.vim"
+alias roficonf="nvim ~/.config/rofi/config.rasi"
+alias neoconf="nvim ~/.config/neofetch/config.conf"
 
 # pacman aliases
-alias sysup="sudo pacman -Syu"
+alias sysup="sudo pacman -Syyu"
 
 # Testing Aliases
 alias testwm="Xephyr :5 & sleep 1 ; DISPLAY=:5 awesome"
-alias nettest="prettyping theoryware.net"
+alias nettest="ping theoryware.net"
 
 # startup
+# ===============================================================================================
 
 clear
 
