@@ -29,9 +29,11 @@ $ ./dotdrop.sh install artix
 2. actually improve the awesome config
 3. make a better "installer"
 ## Images:
-![Blank Destop](/images/rev1/desktop.png)
+![Empty Destop](/images/rev2/desktop_empty.png)
 
-![Terminal Apps](/images/rev1/termapps.png)
+![Terminal Apps](/images/rev2/desktop_windows.png)
+
+![Floating Window on Desktop](/images/rev2/desktop_floating.png)
 
 ## Keybinds:
 #### Window Manipultion:
