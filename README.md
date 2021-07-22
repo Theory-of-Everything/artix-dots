@@ -1,5 +1,7 @@
 
-# artix-dots (dont skip)
+# artix-dots (DEPRECATED/ARCHIVED)
+# NOTICE:
+**This dotfiles are currently unused and unmaintained due to me forking this work to my main theory-of-ebrything/dotfiles repo**
 ## The goal
 
 The rationale behind these dots are to be as Keyboard-centric as possible, elimainating mouse use as much as possible. However, these dots are also designed to be usable in a more traditional stacking style of wm. Versatility is key. Another key point is performace, as I want as much resources possible avalible to apps that actually need it, not to my wm.
